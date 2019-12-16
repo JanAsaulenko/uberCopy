@@ -1,0 +1,12 @@
+type Query{
+     sayHello(name:String):Greeting
+}
+type Greeting{
+    value:String!
+    error:Boolean
+    status:Status
+}
+
+type Status{
+    name:String!
+}
