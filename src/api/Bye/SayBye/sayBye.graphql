@@ -1,0 +1,6 @@
+type Query  {
+    hero: User!
+}
+type User{
+name:String!
+}

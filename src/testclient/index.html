@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    .header {
+        width: 100%;
+        box-sizing: border-box;
+        height: 100px;
+        background: rgb(57, 219, 8);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .header_theme_dark {
+        width: 100%;
+        box-sizing: border-box;
+        height: 100px;
+        color: whitesmoke;
+        background: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .header__navigation {
+        width: 60%;
+    }
+
+    .list {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+    }
+
+    .list__item {
+        min-width: min-content;
+        height: 20px;
+    }
+    .list__item-active{
+        background: blue;
+    }
+
+    .list__item:hover {
+        background: lightslategray;
+    }
+</style>
+
+<body>
+
+    <div class="header ">
+        <div class="header__logo">Logo</div>
+        <nav class="header__navigation">
+            <ul class="list">
+                <li class="list__item">Home</li>
+                <li class="list__item">Gallary</li>
+                <li class="list__item">Contacts</li>
+                <li class="list__item">About</li>
+                <li class="list__item ">
+                    <div>
+                        <input />
+                        <button onclick="makeDark()">Dark</button>
+                        <button onclick="makeLight()">Light</button>
+
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header header_theme_dark">
+            <div class="header__logo">Logo</div>
+            <nav class="header__navigation">
+                <ul class="list">
+                    <li class="list__item list__item-active">Home</li>
+                    <li class="list__item">Gallary</li>
+                    <li class="list__item">Contacts</li>
+                    <li class="list__item">About</li>
+                    <li class="list__item ">
+                        <div>
+                            <input />
+                            <button onclick="makeDark()">Dark</button>
+                            <button onclick="makeLight()">Light</button>
+    
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+</body>
+<script>
+
+    function makeDark() {
+        let header = document.getElementsByClassName('header')[0];
+        header.className = 'header_theme_dark'
+    }
+
+    function makeLight() {
+        let headerCustom = document.getElementsByClassName('header_theme_dark')[0];
+        headerCustom.className = 'header';
+    }
+
+</script>
+
+</html>

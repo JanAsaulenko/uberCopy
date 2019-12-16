@@ -1,0 +1,13 @@
+type Query {
+  hero: User!
+  sayHello: Greeting
+}
+
+type User {
+  name: String!
+}
+
+type Greeting {
+  value: String!
+  error: Boolean!
+}
